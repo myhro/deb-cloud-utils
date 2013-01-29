@@ -1,24 +1,23 @@
 Source: cloud-utils
 Section: admin
 Priority: extra
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Build-Depends: cdbs, debhelper (>= 7), python-all (>= 2.6)
-XS-Python-Version: >= 2.6
-Standards-Version: 3.9.2
+Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
+Uploaders: Julien Danjou <acid@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), python
+Standards-Version: 3.9.3
 
 Package: cloud-utils
 Architecture: all
 Depends: e2fsprogs (>=1.4),
          euca2ools,
          file,
-         genisoimage,
+         gnupg,
          python,
          python-paramiko,
          python-yaml,
          util-linux (>= 2.17.2),
          ${misc:Depends}
 Recommends: python-distro-info, distro-info
-Suggests: mtools
 Description: cloud image management utilities
  This package provides a useful set of utilities for managing cloud
  images.

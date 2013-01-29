@@ -1,0 +1,8 @@
+usr/bin/cloud-publish-tarball usr/bin/uec-publish-tarball 
+usr/bin/cloud-publish-image usr/bin/uec-publish-image
+usr/bin/cloud-run-instances usr/bin/uec-run-instances
+usr/bin/resize-part-image usr/bin/uec-resize-image
+usr/share/man/man1/cloud-publish-tarball.1 usr/share/man/man1/uec-publish-tarball.1
+usr/share/man/man1/cloud-publish-image.1 usr/share/man/man1/uec-publish-image.1
+usr/share/man/man1/cloud-run-instances.1 usr/share/man/man1/uec-run-instances.1
+usr/share/man/man1/resize-part-image.1 usr/share/man/man1/uec-resize-image.1
