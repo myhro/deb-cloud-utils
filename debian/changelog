@@ -3,6 +3,7 @@ cloud-utils (0.26-2) unstable; urgency=low
   * Fixes "trap cleanup EXIT" in growpart: replaces "EXIT" by 0, as it
     otherwise fails in the Debian initramfs.
   * Added VCS fields.
+  * Added a debian/gbp.conf
 
  -- Thomas Goirand <zigo@debian.org>  Tue, 11 Jun 2013 21:47:17 +0800
 
