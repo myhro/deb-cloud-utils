@@ -1,4 +1,4 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Name: cloud-utils
 Maintainer: Scott Moser <scott.moser@canonical.com>
 Source: https://code.launchpad.net/~ubuntu-on-ec2/ubuntu-on-ec2/uec-tools
