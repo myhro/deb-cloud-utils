@@ -1,8 +1,9 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Name: cloud-utils
-Maintainer: Scott Moser <scott.moser@canonical.com>
+Upstream-Name: cloud-utils
+Upstream-Contact: Scott Moser <scott.moser@canonical.com>
 Source: https://code.launchpad.net/~ubuntu-on-ec2/ubuntu-on-ec2/uec-tools
 
+Files: *
 Copyright: 2010, Canonical Ltd.
 License: GPL-3
  This program is free software: you can redistribute it and/or modify
