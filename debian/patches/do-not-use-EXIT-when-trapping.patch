@@ -1,0 +1,17 @@
+Description: Uses 0 instead of EXIT when trapping
+ Under Ubuntu, this seems harmless, but in Debian, it breaks, so I'm patching.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: not-needed
+Last-Update: 2013-06-11
+
+--- cloud-utils-0.26.orig/bin/growpart
++++ cloud-utils-0.26/bin/growpart
+@@ -109,7 +109,7 @@ done
+ [ "${part#*[!0-9]}" = "${part}" ] || fail "partition-number must be a number"
+ 
+ mktemp_d && TEMP_D="${_RET}" || fail "failed to make temp dir"
+-trap cleanup EXIT
++trap cleanup 0
+ 
+ change_out=${TEMP_D}/change.out
+ dump_out=${TEMP_D}/dump.out

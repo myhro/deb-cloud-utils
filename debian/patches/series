@@ -1,1 +1,1 @@
-fixes-non-defined-EXIT-trap.patch
+do-not-use-EXIT-when-trapping.patch
