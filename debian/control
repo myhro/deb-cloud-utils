@@ -5,6 +5,8 @@ Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
 Uploaders: Julien Danjou <acid@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), python
 Standards-Version: 3.9.3
+Vcs-Git: git://anonscm.debian.org/git/collab-maint/cloud-utils.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/cloud-utils.git
 
 Package: cloud-utils
 Architecture: all
