@@ -2,7 +2,7 @@ Source: cloud-utils
 Section: admin
 Priority: extra
 Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
-Uploaders: Julien Danjou <acid@debian.org>
+Uploaders: Julien Danjou <acid@debian.org>, Thomas Goirand <zigo@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), python
 Standards-Version: 3.9.3
 Vcs-Git: git://anonscm.debian.org/git/collab-maint/cloud-utils.git
