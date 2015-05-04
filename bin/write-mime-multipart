@@ -4,12 +4,8 @@
 
 import os
 import sys
-import smtplib
-# For guessing MIME type based on file name extension
-import mimetypes
 
 from email import encoders
-from email.message import Message
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -20,6 +16,7 @@ COMMASPACE = ', '
 
 starts_with_mappings = {
     '#include': 'text/x-include-url',
+    '#include-once': 'text/x-include-once-url',
     '#!': 'text/x-shellscript',
     '#cloud-config': 'text/cloud-config',
     '#cloud-config-archive': 'text/cloud-config-archive',
