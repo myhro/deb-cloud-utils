@@ -5,6 +5,7 @@ Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
 Uploaders: Julien Danjou <acid@debian.org>,
            Thomas Goirand <zigo@debian.org>,
 Build-Depends: debhelper (>= 9),
+               openstack-pkg-tools,
                python-all,
 Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/git/collab-maint/cloud-utils.git

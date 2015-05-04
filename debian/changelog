@@ -6,6 +6,8 @@ cloud-utils (0.27-1) unstable; urgency=medium
   * Added Debian package maintainers to debian/copyright.
   * Build-depends on python-all, not just python.
   * Standards-Version: 3.9.6 (no change).
+  * Added to debian/rules: include /usr/share/openstack-pkg-tools/pkgos.make
+    and build-depends on openstack-pkg-tools.
 
  -- Thomas Goirand <zigo@debian.org>  Mon, 04 May 2015 09:34:24 +0200
 
