@@ -9,6 +9,7 @@ cloud-utils (0.27-1) unstable; urgency=medium
   * Added to debian/rules: include /usr/share/openstack-pkg-tools/pkgos.make
     and build-depends on openstack-pkg-tools.
   * Added Homepage field.
+  * Fixed lintian warning about non-canonical Vcs-Git.
 
  -- Thomas Goirand <zigo@debian.org>  Mon, 04 May 2015 09:34:24 +0200
 
