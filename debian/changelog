@@ -1,3 +1,9 @@
+cloud-utils (0.27-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 May 2015 09:34:24 +0200
+
 cloud-utils (0.26-2) unstable; urgency=low
 
   * Fixes "trap cleanup EXIT" in growpart: replaces "EXIT" by 0, as it
