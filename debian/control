@@ -10,6 +10,7 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/git/collab-maint/cloud-utils.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/cloud-utils.git
+Homepage: https://launchpad.net/cloud-utils
 
 Package: cloud-utils
 Architecture: all
