@@ -4,6 +4,7 @@ cloud-utils (0.27-1) unstable; urgency=medium
   * Refreshed do-not-use-EXIT-when-trapping.patch.
   * Added support-new-sfdisk-version-2.26.patch (Closes: #783826).
   * Added Debian package maintainers to debian/copyright.
+  * Build-depends on python-all, not just python.
 
  -- Thomas Goirand <zigo@debian.org>  Mon, 04 May 2015 09:34:24 +0200
 

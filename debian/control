@@ -2,8 +2,10 @@ Source: cloud-utils
 Section: admin
 Priority: extra
 Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
-Uploaders: Julien Danjou <acid@debian.org>, Thomas Goirand <zigo@debian.org>
-Build-Depends: debhelper (>= 9), python
+Uploaders: Julien Danjou <acid@debian.org>,
+           Thomas Goirand <zigo@debian.org>,
+Build-Depends: debhelper (>= 9),
+               python-all,
 Standards-Version: 3.9.3
 Vcs-Git: git://anonscm.debian.org/git/collab-maint/cloud-utils.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/cloud-utils.git
@@ -18,8 +20,9 @@ Depends: e2fsprogs (>=1.4),
          python-paramiko,
          python-yaml,
          util-linux (>= 2.17.2),
-         ${misc:Depends}
-Recommends: python-distro-info, distro-info
+         ${misc:Depends},
+Recommends: distro-info,
+            python-distro-info,
 Description: cloud image management utilities
  This package provides a useful set of utilities for managing cloud
  images.
