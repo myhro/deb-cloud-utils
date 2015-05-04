@@ -3,8 +3,16 @@ Upstream-Name: cloud-utils
 Upstream-Contact: Scott Moser <scott.moser@canonical.com>
 Source: https://code.launchpad.net/~ubuntu-on-ec2/ubuntu-on-ec2/uec-tools
 
+Files: debian/*
+Copyright: (c) 2010-2012, Canonical Ltd.
+           (c) 2013, 2015, Thomas Goirand <zigo@debian.org>
+           (c) 2013, Julien Danjou <acid@debian.org>
+License: GPL-3
+
 Files: *
 Copyright: 2010, Canonical Ltd.
+License: GPL-3
+
 License: GPL-3
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License version 3, as
