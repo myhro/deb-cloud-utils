@@ -11,9 +11,9 @@ Bug-Debian: https://bugs.debian.org/783826
 Forwarded: no
 Last-Update: 2015-05-04
 
---- cloud-utils-0.27.orig/bin/growpart
-+++ cloud-utils-0.27/bin/growpart
-@@ -132,8 +132,46 @@ bad_Usage() {
+--- a/bin/growpart
++++ b/bin/growpart
+@@ -132,8 +132,46 @@
  	exit 2
  }
  
@@ -31,8 +31,8 @@ Last-Update: 2015-05-04
 +		return $?
 +	# Compatibility layer for non-debian platforms
 +	else
-+		MAJOR=`echo $SFDISK_VERSION | cut -d. -f1`
-+		MID=`echo $SFDISK_VERSION | cut -d. -f2`
++		MAJOR=${SFDISK_VERSION%%.*}
++		MID=${${SFDISK_VERSION#*.}%%.*}
 +		if [ ${MAJOR} -ge 2 ] ; then
 +			if [ ${MAJOR} -gt 2 ] ; then
 +				SFDISK_HIGHER_THAN_226=0
@@ -61,7 +61,7 @@ Last-Update: 2015-05-04
  }
  
  sfdisk_worked_but_blkrrpart_failed() {
-@@ -148,7 +186,7 @@ sfdisk_worked_but_blkrrpart_failed() {
+@@ -148,7 +186,7 @@
  
  mbr_resize() {
  	RESTORE_HUMAN="${TEMP_D}/recovery"
@@ -70,7 +70,7 @@ Last-Update: 2015-05-04
  
  	local change_out=${TEMP_D}/change.out
  	local dump_out=${TEMP_D}/dump.out
-@@ -160,24 +198,39 @@ mbr_resize() {
+@@ -160,24 +198,39 @@
  	local _devc cyl _w1 heads _w2 sectors _w3 tot dpart
  	local pt_start pt_size pt_end max_end new_size change_info
  
@@ -128,7 +128,7 @@ Last-Update: 2015-05-04
  	[ $? -eq 0 ] || fail "failed to save sfdisk -d output"
  
  	debugcat 1 "${RESTORE_HUMAN}"
-@@ -237,8 +290,13 @@ mbr_resize() {
+@@ -237,8 +290,13 @@
  		exit 0
  	fi
  
