@@ -1,3 +1,11 @@
+cloud-utils (0.27-2~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Suggested by Juerg Haefliger in #784004 as an alternative to avoid
+    cloud-init breakage because of the current growpart version in Jessie.
+
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Sat, 30 Jan 2016 00:00:12 -0200
+
 cloud-utils (0.27-2) unstable; urgency=medium
 
   * Adjust sfdisk 2.26 patch to not use cut.  closes: #793914.
