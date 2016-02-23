@@ -4,36 +4,67 @@ Priority: extra
 Maintainer: Debian Cloud <debian-cloud@lists.debian.org>
 Uploaders: Julien Danjou <acid@debian.org>,
            Thomas Goirand <zigo@debian.org>,
-Build-Depends: debhelper (>= 9),
-               openstack-pkg-tools,
-               python-all,
+           Tiago Ilieve <tiago.myhro@gmail.com>,
+Build-Depends: debhelper (>= 9), dh-python, python3-all
 Standards-Version: 3.9.6
-Vcs-Git: git://anonscm.debian.org/collab-maint/cloud-utils.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/cloud-utils.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/cloud-utils.git
+Vcs-Browser: https://anonscm.debian.org/git/collab-maint/cloud-utils.git
 Homepage: https://launchpad.net/cloud-utils
 
 Package: cloud-utils
+Priority: extra
+Section: admin
+Architecture: all
+Depends: cloud-guest-utils, cloud-image-utils, ${misc:Depends}
+Description: metapackage for installation of upstream cloud-utils source
+ This meta-package will depend on all sub-packages built by the
+ upstream cloud-utils source.
+
+Package: cloud-guest-utils
 Architecture: all
 Depends: e2fsprogs (>=1.4),
-         euca2ools,
-         file,
-         gnupg,
-         python,
-         python-paramiko,
-         python-yaml,
          util-linux (>= 2.17.2),
          ${misc:Depends},
-Recommends: distro-info,
-            python-distro-info,
+         ${python3:Depends}
+Recommends: gdisk | util-linux (>= 2.26.3)
+Breaks: cloud-utils (<< 0.28~bzr281)
+Replaces: cloud-utils (<< 0.28~bzr281)
+Description: cloud guest utilities
+ This package contains programs useful inside cloud instance.
+ It contains 'growpart' for resizing a partition during boot.
+
+Package: cloud-image-utils
+Architecture: all
+Depends: ca-certificates,
+         e2fsprogs (>=1.4),
+         file,
+         genisoimage,
+         qemu-utils,
+         wget,
+         ${misc:Depends},
+         ${python3:Depends}
+Breaks: cloud-utils (<< 0.28~bzr281)
+Replaces: cloud-utils (<< 0.28~bzr281)
+Recommends: distro-info
+Suggests: cloud-utils-euca
 Description: cloud image management utilities
- This package provides a useful set of utilities for managing cloud
- images.
- .
- The euca2ools package (a dependency of cloud-utils) provides an
- Amazon EC2 API compatible set of utilities for bundling kernels,
- ramdisks, and root filesystems, and uploading them to either EC2
- or UEC.
- .
+ This package provides a useful set of utilities for working with cloud
+ images.  It contains tools to help in modifying cloud images, running, and
+ querying data related to cloud-images.
+
+Package: cloud-utils-euca
+Architecture: all
+Breaks: cloud-utils (<< 0.28~bzr281)
+Replaces: cloud-utils (<< 0.28~bzr281)
+Depends: cloud-image-utils,
+         euca2ools,
+         file,
+         qemu-utils,
+         wget,
+         ${misc:Depends},
+         ${python3:Depends}
+Description: cloud image utilities wrapping euca2ools
  The tasks associated with image bundling are often tedious and
- repetitive.  The cloud-utils package provides several scripts
- that wrap the complicated tasks with a much simpler interface.
+ repetitive.  The cloud-utils-euca package provides a useful set of utilities
+ for managing cloud images wrapping the euca2ools commands, and a utility
+ (ubuntu-ec2-run) for launching ubuntu instances.
