@@ -1,16 +1,18 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cloud-utils
 Upstream-Contact: Scott Moser <scott.moser@canonical.com>
-Source: https://code.launchpad.net/~ubuntu-on-ec2/ubuntu-on-ec2/uec-tools
+Source: https://code.launchpad.net/cloud-utils
 
 Files: debian/*
 Copyright: (c) 2010-2012, Canonical Ltd.
            (c) 2013, 2015, Thomas Goirand <zigo@debian.org>
            (c) 2013, Julien Danjou <acid@debian.org>
+           (c) 2016, Tiago Ilieve <tiago.myhro@gmail.com>
 License: GPL-3
 
 Files: *
-Copyright: 2010, Canonical Ltd.
+Copyright: 2010-2013, Canonical Ltd.
+           2013, Hewlett-Packard Development Company, L.P.
 License: GPL-3
 
 License: GPL-3

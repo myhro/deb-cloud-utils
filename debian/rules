@@ -1,6 +1,4 @@
 #!/usr/bin/make -f
 
-include /usr/share/openstack-pkg-tools/pkgos.make
-
 %:
-	dh $@ --with python2
+	dh $@ --with python3
