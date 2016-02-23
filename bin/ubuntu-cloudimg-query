@@ -5,7 +5,8 @@ TEMP_D=""
 NAME="ubuntu-cloudimg-query"
 DOT_D="$HOME/.$NAME"
 CACHE_D="$HOME/.cache/$NAME"
-KNOWN_RELEASES="hardy karmic lucid maverick natty oneiric precise quantal raring";
+KNOWN_RELEASES="hardy karmic lucid maverick natty oneiric precise quantal
+	raring trusty utopic vivid";
 cachelife=86400
 
 error() { echo "$@" 1>&2; }
@@ -23,6 +24,7 @@ Usage: ${0##*/} [ options ] criteria
       -o | --output FILE    output to file rather than stdout
       -f | --format format  change output to 'format'.
                             default: '%{ami}\n'
+           --arch   ARCH    use the specified arch
 
    Examples:
    - get the latest ami matching default criteria for release 'n'
@@ -122,7 +124,7 @@ getreleases() {
 }
 
 short_opts="f:ho:v"
-long_opts="format:,help,no-cache,output:,verbose"
+long_opts="arch:,format:,help,no-cache,output:,verbose"
 getopt_out=$(getopt --name "${0##*/}" \
 	--options "${short_opts}" --long "${long_opts}" -- "$@") &&
 	eval set -- "${getopt_out}" ||
@@ -134,7 +136,7 @@ format='%{ami}\n'
 burl="${UBUNTU_CLOUDIMG_QUERY_BASEURL:-https://cloud-images.ubuntu.com/query}"
 store="ebs"
 region_default="${EC2_REGION:-us-east-1}"
-release="lucid"
+release="precise"
 arch="amd64"
 stream="released"
 bname="server"
@@ -150,6 +152,7 @@ itypes_ebs_only="t1.micro m3.xlarge m3.2xlarge"
 while [ $# -ne 0 ]; do
 	cur=${1}; next=${2};
 	case "$cur" in
+           --arch) arch="$next"; shift;;
 		-h|--help) Usage ; exit 0;;
 		-f|--format) format=${2}; shift;;
 		-o|--output) output=${2}; shift;;
@@ -169,7 +172,9 @@ for i in "$@"; do
 		rel*) stream="released";;
 		daily) stream=${i};;
 		server|desktop) bname=${i};;
-		i386|amd64|x86_64) arch=${i}; [ "${i}" = "x86_64" ] && arch="amd64";;
+		i386|amd64|x86_64|armhf|ppc64el|arm64|s390x|powerpc)
+			arch=${i};
+			[ "${i}" = "x86_64" ] && arch="amd64";;
 		*-*-[0-9]) region=${i};;
 		ebs) store="$i";;
 		instance|instance-store) store="instance-store";;
@@ -249,7 +254,13 @@ ami=$(awk '-F\t' \
 	$6 == arch && $7 == region && $11 == ptype { print $8 }' \
 	"release=$release" "bname=${bname}" \
 	"store=$store" "arch=$arch" "region=$region" "ptype=$ptype" \
-	"${ec2_curf}") && [ -n "$ami" ] || fail "failed to find ami"
+	"${ec2_curf}")
+
+if [ -z "$ami" ]; then
+	amifmt="%{ami}"
+	[ "$format" = "${format#*${amifmt}}" ] ||
+		fail "no matching ami id found, but '%{ami}' in output format"
+fi
 
 case "$arch:$store:$ptype" in
 	*:hvm) itypes_all="${itypes_hvm}";;
