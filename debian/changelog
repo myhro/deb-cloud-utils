@@ -1,3 +1,22 @@
+cloud-utils (0.28~bzr281-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * Add man page for cloud-localds. (Closes: #718247)
+  * Add myself to uploaders.
+  * Fix GPT partition resize with sfdisk >= 2.26 (Closes: #784673)
+  * Fix misspelling in growpart man page. (Closes: #793919)
+  * Remove debian/clean as 'ubuntu-cloudimg-keyring.gpg' is not present
+    anymore.
+  * Remove obsolete patches.
+  * Split binary packages. (Closes: #747229)
+  * Update debian/copyright:
+    - Add Hewlett-Packard to upstream authors.
+    - Add myself to package maintainers.
+    - Update upstream URL.
+  * Update debian/rules to build with python3.
+
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Tue, 23 Feb 2016 01:37:43 -0300
+
 cloud-utils (0.27-2) unstable; urgency=medium
 
   * Adjust sfdisk 2.26 patch to not use cut.  closes: #793914.
