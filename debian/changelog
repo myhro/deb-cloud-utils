@@ -1,15 +1,26 @@
 cloud-utils (0.28~bzr281-1) UNRELEASED; urgency=medium
 
-  * New upstream release.
+  * New snapshot from upstream.
   * Add man page for cloud-localds. (Closes: #718247)
   * Add myself to uploaders.
+  * Add NEWS file.
+    - Mention the removal of deprecated links.
   * Fix GPT partition resize with sfdisk >= 2.26 (Closes: #784673)
   * Fix misspelling in growpart man page. (Closes: #793919)
   * Remove debian/clean as 'ubuntu-cloudimg-keyring.gpg' is not present
     anymore.
-  * Remove obsolete patches.
-  * Split binary packages. (Closes: #747229)
+  * Remove Links for uec-resize-image, uec-publish-image and
+    uec-publish-tarball, as they were deprecated.
+  * Remove obsolete patches which their issues were fixed upstream:
+    - also-support-sfdisk-2.26-and-higher.patch
+    - do-not-use-EXIT-when-trapping.patch
+  * Split binary packages: (Closes: #747229)
+    - cloud-utils (metapackage)
+    - cloud-guest-utils
+    - cloud-image-utils
+    - cloud-utils-euca
   * Update debian/copyright:
+    - Add 2016 for Canonical contributions.
     - Add Hewlett-Packard to upstream authors.
     - Add myself to package maintainers.
     - Update upstream URL.
