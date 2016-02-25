@@ -1,4 +1,0 @@
-usr/bin/cloud-publish-image usr/bin/uec-publish-image
-usr/bin/cloud-publish-tarball usr/bin/uec-publish-tarball
-usr/share/man/man1/cloud-publish-image.1 usr/share/man/man1/uec-publish-image.1
-usr/share/man/man1/cloud-publish-tarball.1 usr/share/man/man1/uec-publish-tarball.1
