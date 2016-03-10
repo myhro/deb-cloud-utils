@@ -1,4 +1,4 @@
-cloud-utils (0.28~bzr281-1) UNRELEASED; urgency=medium
+cloud-utils (0.28~bzr281-1) unstable; urgency=medium
 
   * New snapshot from upstream.
   * Add man page for cloud-localds. (Closes: #718247)
@@ -27,7 +27,7 @@ cloud-utils (0.28~bzr281-1) UNRELEASED; urgency=medium
   * Update debian/rules to build with python3.
   * Update Standards-Version to 3.9.7 (no change).
 
- -- Tiago Ilieve <tiago.myhro@gmail.com>  Tue, 23 Feb 2016 01:37:43 -0300
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Thu, 10 Mar 2016 19:52:45 -0300
 
 cloud-utils (0.27-2) unstable; urgency=medium
 
