@@ -2,7 +2,7 @@ cloud-utils (0.28~bzr281-1) UNRELEASED; urgency=medium
 
   * New snapshot from upstream.
   * Add man page for cloud-localds. (Closes: #718247)
-  * Add myself to uploaders.
+  * Add myself as maintainer.
   * Add NEWS file.
     - Mention the removal of deprecated links.
   * Fix GPT partition resize with sfdisk >= 2.26 (Closes: #784673)
