@@ -1,5 +1,6 @@
 cloud-utils (0.28~bzr281-1) unstable; urgency=medium
 
+  [ Tiago Ilieve ]
   * New snapshot from upstream.
   * Add man page for cloud-localds. (Closes: #718247)
   * Add myself as maintainer.
@@ -26,6 +27,9 @@ cloud-utils (0.28~bzr281-1) unstable; urgency=medium
     - Update upstream URL.
   * Update debian/rules to build with python3.
   * Update Standards-Version to 3.9.7 (no change).
+
+  [ Antonio Terceiro ]
+  * add myself to Uploaders:
 
  -- Tiago Ilieve <tiago.myhro@gmail.com>  Thu, 10 Mar 2016 19:52:45 -0300
 
