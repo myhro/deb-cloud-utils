@@ -27,9 +27,11 @@ Depends: e2fsprogs (>=1.4),
 Recommends: gdisk | util-linux (>= 2.26.3)
 Breaks: cloud-utils (<< 0.28~bzr281)
 Replaces: cloud-utils (<< 0.28~bzr281)
+Suggests: cloud-init
 Description: cloud guest utilities
  This package contains programs useful inside cloud instance.
- It contains 'growpart' for resizing a partition during boot.
+ It contains 'growpart' for resizing a partition during boot, which is normally
+ done with the aid of cloud-init.
 
 Package: cloud-image-utils
 Architecture: all
