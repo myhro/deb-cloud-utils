@@ -5,7 +5,10 @@ Maintainer: Tiago Ilieve <tiago.myhro@gmail.com>
 Uploaders: Julien Danjou <acid@debian.org>,
            Thomas Goirand <zigo@debian.org>,
            Antonio Terceiro <terceiro@debian.org>,
-Build-Depends: debhelper (>= 9), dh-python, openstack-pkg-tools, python3-all
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               openstack-pkg-tools,
+               python3-all
 Standards-Version: 3.9.7
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/cloud-utils.git
 Vcs-Browser: https://anonscm.debian.org/git/collab-maint/cloud-utils.git
@@ -13,7 +16,9 @@ Homepage: https://launchpad.net/cloud-utils
 
 Package: cloud-utils
 Architecture: all
-Depends: cloud-guest-utils, cloud-image-utils, ${misc:Depends}
+Depends: cloud-guest-utils,
+         cloud-image-utils,
+         ${misc:Depends}
 Description: metapackage for installation of upstream cloud-utils source
  This meta-package will depend on all sub-packages built by the
  upstream cloud-utils source.
