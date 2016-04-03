@@ -20,7 +20,7 @@ Depends: cloud-guest-utils,
          cloud-image-utils,
          ${misc:Depends}
 Description: metapackage for installation of upstream cloud-utils source
- This meta-package will depend on all sub-packages built by the
+ This metapackage will depend on all sub-packages built by the
  upstream cloud-utils source.
 
 Package: cloud-guest-utils
