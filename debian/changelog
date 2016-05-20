@@ -1,3 +1,12 @@
+cloud-utils (0.28-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add signature verification of upstream tarball (fixes
+    'debian-watch-may-check-gpg-signature').
+  * Bump 'Standards-Version' to 3.9.8 (no changes needed).
+
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Fri, 20 May 2016 02:53:52 -0300
+
 cloud-utils (0.28~bzr281-2) unstable; urgency=medium
 
   * Add 'cloud-init' as suggestion for 'cloud-guest-utils'.
