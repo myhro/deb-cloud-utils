@@ -1,2 +1,3 @@
 version=3
-https://launchpad.net/cloud-utils/+download/ https://launchpad.net/cloud-utils/.*/cloud-utils-([\d\.]+)\.tar\.gz
+opts=pgpsigurlmangle=s/$/.asc/ https://launchpad.net/cloud-utils/+download/ \
+  https://launchpad.net/cloud-utils/.*/cloud-utils-([\d\.]+)\.tar\.gz
