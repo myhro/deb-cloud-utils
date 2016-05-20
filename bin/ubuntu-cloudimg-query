@@ -6,7 +6,7 @@ NAME="ubuntu-cloudimg-query"
 DOT_D="$HOME/.$NAME"
 CACHE_D="$HOME/.cache/$NAME"
 KNOWN_RELEASES="hardy karmic lucid maverick natty oneiric precise quantal
-	raring trusty utopic vivid";
+	raring trusty utopic vivid wily xenial yakkety";
 cachelife=86400
 
 error() { echo "$@" 1>&2; }
@@ -81,7 +81,7 @@ isrel() {
 			[ -n "$o" ] && _RET="$o" && return 0
 	done
 	dlcache "$url" "$out" "$cache" "$age" &&
-		o=$(awk '-F\t' '$1 ~ r { print $1; exit(0); }' "r=^$cand" "$out")  &&
+		o=$(awk '-F\t' '$1 ~ r { print $1; exit(0); }' "r=^$cand" "$out") &&
 		[ -n "$o" ] && _RET="$o" && return 0
 	return 1
 }
@@ -136,7 +136,7 @@ format='%{ami}\n'
 burl="${UBUNTU_CLOUDIMG_QUERY_BASEURL:-https://cloud-images.ubuntu.com/query}"
 store="ebs"
 region_default="${EC2_REGION:-us-east-1}"
-release="precise"
+release="xenial"
 arch="amd64"
 stream="released"
 bname="server"
@@ -152,7 +152,7 @@ itypes_ebs_only="t1.micro m3.xlarge m3.2xlarge"
 while [ $# -ne 0 ]; do
 	cur=${1}; next=${2};
 	case "$cur" in
-           --arch) arch="$next"; shift;;
+		   --arch) arch="$next"; shift;;
 		-h|--help) Usage ; exit 0;;
 		-f|--format) format=${2}; shift;;
 		-o|--output) output=${2}; shift;;

@@ -57,8 +57,8 @@ get_cmd() {
 
 apt_install() {
 	local cmd=""
-	cmd=( env DEBIAN_FRONTEND=noninteractive apt-get --quiet 
-		  --assume-yes install "$@" )
+	cmd=( env DEBIAN_FRONTEND=noninteractive apt-get --quiet
+		--assume-yes install "$@" )
 	[ "$(id -u)" = "0" ] ||
 		cmd=( sudo "${cmd[@]}" )
 	debug 1 "installing dependencies:" "${cmd[@]}"
