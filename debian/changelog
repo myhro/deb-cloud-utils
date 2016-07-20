@@ -1,3 +1,10 @@
+cloud-utils (0.29-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright: exclude ".bzr/" folder from upstream tarball.
+
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Wed, 20 Jul 2016 17:09:55 -0300
+
 cloud-utils (0.28-1) unstable; urgency=medium
 
   * New upstream release.
