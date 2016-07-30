@@ -1,3 +1,9 @@
+cloud-utils (0.29-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Tiago Ilieve <tiago.myhro@gmail.com>  Sat, 30 Jul 2016 11:33:15 -0300
+
 cloud-utils (0.29-1) unstable; urgency=medium
 
   * New upstream release.
